@@ -1,0 +1,12 @@
+import javax.swing.*;
+
+
+public class PanelSuperior extends JPanel {
+
+    JLabel etiquetaPanel;
+    public PanelSuperior() {
+        etiquetaPanel = new JLabel(" Panel Superior");
+        this.add(etiquetaPanel);
+    }
+
+}
