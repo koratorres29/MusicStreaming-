@@ -1,0 +1,30 @@
+import javax.swing.*;
+import  java.awt.*;
+
+
+public class MainWindow extends JFrame {
+    PanelDerecho PanelDerecho;
+    PanelInferior PanelInferior;
+    PanelSuperior PanelSuperior;
+    PanelIzquierdo PanelIzquierdo;
+
+    public MainWindow() {
+
+        setSize(800, 600);
+        setTitle("Ventana de Playlist");
+
+        PanelDerecho = new PanelDerecho();
+        PanelInferior = new PanelInferior();
+        PanelSuperior = new PanelSuperior();
+        PanelIzquierdo = new PanelIzquierdo();
+
+        this.setLayout(new BorderLayout());
+
+        this.add(PanelDerecho, BorderLayout.EAST);
+        this.add(PanelInferior, BorderLayout.SOUTH);
+        this.add(PanelSuperior, BorderLayout.NORTH);
+        this.add(PanelIzquierdo, BorderLayout.WEST);
+
+    }
+
+}
