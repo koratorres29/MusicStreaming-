@@ -1,0 +1,13 @@
+import javax.swing.*;
+
+
+public class PanelDerecho extends JPanel {
+
+    JLabel etiquetaDerecha;
+
+    public PanelDerecho() {
+        etiquetaDerecha = new JLabel("Panel Derecho");
+        this.add(etiquetaDerecha);
+    }
+
+}
