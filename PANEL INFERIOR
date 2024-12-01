@@ -1,0 +1,11 @@
+import javax.swing.*;
+
+public class PanelInferior extends JPanel {
+
+    JLabel etiquetaInferior;
+
+    public PanelInferior() {
+        etiquetaInferior = new JLabel("Panel Inferior");
+        this.add(etiquetaInferior);
+    }
+}
