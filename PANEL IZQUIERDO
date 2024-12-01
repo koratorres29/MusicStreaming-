@@ -1,0 +1,41 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class PanelIzquierdo extends JPanel {
+    JLabel lblIzquierdo, lblCancion, lblArtista, lblAlbum;
+    JTextField txtCancion, txtArtista, txtAlbum;
+    JButton btnGuardar;
+
+    public PanelIzquierdo() {
+
+        lblIzquierdo = new JLabel(" Panel Izquierdo");
+        //this.ad (lblIzquierdo);
+
+        this.setPreferredSize(new Dimension(400, 200));
+
+        // establecer diagramación del panel
+        this.setLayout(new GridLayout(5, 2));
+
+        //crear elementos:
+        lblCancion = new JLabel("Cancion");
+        lblArtista = new JLabel("Artista");
+        lblAlbum = new JLabel("Album");
+        txtCancion = new JTextField();
+        txtArtista = new JTextField();
+        txtAlbum = new JTextField();
+        btnGuardar = new JButton("Guardar");
+
+
+        this.add(lblIzquierdo);
+        this.add(new JLabel(""));
+        this.add(lblCancion);
+        this.add(txtCancion);
+        this.add(lblArtista);
+        this.add(txtArtista);
+        this.add(lblAlbum);
+        this.add(txtAlbum);
+        this.add(new JLabel(""));
+        this.add(btnGuardar);
+
+
+    }
