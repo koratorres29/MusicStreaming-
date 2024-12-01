@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MainClass {
+    public static void main(String[] args) {
+
+        MainWindow miVentana = new MainWindow();
+        miVentana.setVisible(true);
+    }
+
+    public static class Usuario {
+
+        public static void main(String[] args) {
+            JFrame ventana = new JFrame("Usuario");
+            ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            JPanel panel = new JPanel();
+            ventana.add(panel);
+
+            JLabel etiquetaUsuario = new JLabel("Usuario");
+            panel.add(etiquetaUsuario);
+
+            JTextField campoUsuario = new JTextField(15);
+            panel.add(campoUsuario);
+
+            JLabel etiquetaPlaylist = new JLabel("Playlist");
+            panel.add(etiquetaPlaylist);
+
+            JTextField campoPlaylist = new JTextField(15);
+            panel.add(campoPlaylist);
+
+            JButton botonGuardar = new JButton("Guardar");
+            panel.add(botonGuardar);
+
+            botonGuardar.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    String usuario = campoUsuario.getText();
+                    String playlist = campoPlaylist.getText();
+
+                    System.out.println("Usuario: " + usuario);
+                    System.out.println("Playlist: " + playlist);
+                }
+            });
+
+            ventana.setVisible(true);
+        }
+    }
+}
